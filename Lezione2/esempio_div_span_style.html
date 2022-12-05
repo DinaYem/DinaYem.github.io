@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio div span inline</title>
+    <style>
+        p {
+            color: #26b72b;
+            background-color: rgb(237, 246, 246);
+            padding: 5px;
+            border: 1px solid rgb(168, 242, 9);
+        }
+
+        .warning {
+            border: 10px ridge rgb(6, 6, 234);
+            background-color: rgb(96, 169, 238);
+            padding: .5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .warning img {
+            width: 5%;
+       
+        }
+
+        .warning p {
+            font: small-caps bold 1.2rem sans-serif;
+            text-align: center;
+        }
+
+        .ombra {
+            width: 15em;
+            border: 1px solid #333;
+            box-shadow: 8px 8px 5px rgb(35, 34, 34);
+            padding: 8px 12px;
+            background-image: linear-gradient(180deg, #fff, #ddd 50%, #ccc);
+        }
+    </style>
+</head>
+<body>
+     <!-- TO DO
+        h2 colore
+        styles verde con uno span
+        immagine che venga visualizzata
+        elemento che abbia applicato ombra
+        h3 con uno style inline
+    -->
+    <h2 style="color: rebeccapurple">Questo è un titolo</h2>
+<p>Lorem Ipsum is simply <span style="color:navy">dummy text</span> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+    </p>
+    <div class="warning">
+    <img src="assets/aircraft.jpg" alt=Aircraft/>
+    <p><span class="ombra">NEOS</span></p>
+    </div>  
+</body>
+</html>
