@@ -1,0 +1,74 @@
+/* General styles */
+  body {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    width: 80em;
+    margin: 0 auto;
+    }
+  nav {
+    font-size: 16px;
+  }
+  /* Typography */
+  h1 {
+    font-size: 4em;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 3.2em;
+  }
+  
+  p, li {
+    font-size: 1.7em;
+    line-height: 2;
+  }
+
+  img {
+    float: left;
+    width: 200px;
+    margin: 1em 1em;
+  }
+  /*+++ more specific section styles +++*/
+  
+  /* header and footer */
+  header {
+    background-color: azure;
+    height: 10em;
+    padding: 2em;
+  }
+
+  footer {
+    background-color: rgb(36, 89, 211);
+    height: 5em;
+    padding: 2em;
+  }
+  
+  footer p {
+    margin: 0px;
+    color: white;
+  }
+  
+  /* main content */
+  main {
+    padding: 2em;
+  }
+
+  /* formclass*/
+form.formclass {
+  display: table;
+  font-size: 16px;
+}
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 5px;
+  border: .5px thin gray;
+} 
+ 
+
+  
+  
