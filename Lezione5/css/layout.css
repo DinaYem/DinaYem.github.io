@@ -1,0 +1,46 @@
+.format1 {
+    display: block;
+    box-sizing: border-box;
+    width: 70%;
+    /*height: auto;*/
+    border: solid rgb(100, 68, 231) 2px;
+    padding: 10px;
+    float: left;
+}
+.format2 {
+    display: block;
+    box-sizing: border-box;
+    width: 30%;
+    /*height: auto;*/
+    border: solid rgb(100, 68, 231) 2px;
+    padding: 10px;
+    float: right; 
+}
+
+.format3 {
+    display: block;
+    box-sizing: border-box;
+    width: 70%;
+    border: solid rgb(100, 68, 231) 2px;
+    float: left; 
+}
+
+.format4 {
+    display: block;
+    box-sizing: border-box;
+    width: 30%;
+    border: solid rgb(100, 68, 231) 2px;
+    float: right; 
+}
+
+/*
+position: absolute;
+left: 40px;
+width: calc(100% - 80px);
+border: solid black 1px;
+box-shadow: 1px 2px;
+background-color: yellow;
+padding: 6px;
+text-align: center;
+box-sizing: border-box;
+*/
