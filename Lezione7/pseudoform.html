@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with pseudoclass</title>
+    <link rel="stylesheet" href="pseudoform.css"
+</head>
+<body>
+    <form>
+        <h3>Compila il modulo d'iscrizione</h3>
+        <label>Nome completo: <input name="firstName" type="text"></label> 
+        <label>E-mail: <input name="email" type="email"></label>
+    </form><br>
+        <label for="password">Password (8 characters minimum):</label>
+        <input type="password" id="password" name="password" minlength="8">
+        <label for="passwordConfirm">Confirm Password:</label>
+        <input type="passwordCfr" id="passwordCfr" name="passwordCfr" minlength="8">
+    <input type="submit" value="Sign in">
+</body>
+</html>
+
+
+ <!--
+            TO DO
+           campi  password + conferma password - fatto
+        controlli css
+        - invalid CERCHI DI ROSSO 
+        - valid cerchio in verde
+        - focus background giallo - fatto
+        - bottone on hover effetto ombra - fatto
+        - font blue per tutto - fatto
+        -->

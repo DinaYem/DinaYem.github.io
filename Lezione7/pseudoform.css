@@ -1,0 +1,37 @@
+* {
+    color:blue;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+input[type='submit'],
+label {
+    margin-top: 1rem;
+}
+
+input:valid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid deepskyblue;
+    border-radius: 5px;
+    accent-color: gold;
+}
+
+input:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid rgb(255, 0, 13);
+    border-radius: 5px;
+    accent-color: gold;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+input:hover {
+    background-color: bisque;
+}
