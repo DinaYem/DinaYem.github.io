@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floated</title>
+  </head>
+  <style>
+    /* 1 STEP : box sizing and lobotimized owl */
+    /* box-sizing border per tutto il documento HTML */
+    :root {
+      box-sizing: border-box;
+    }
+/* sLa prima dichiarazione fa imposta il box-sizing all’elemento root, la
+seconda invece imposta per tutti gli altri elementi che la proprietà sia
+“ereditata” */
+    *,
+    ::after,
+    ::before {
+      box-sizing: inherit;
+    }
+
+    /* margin per ogni non first child element */
+   body * + * {
+      margin-top: 1.5em;
+    } 
+
+    /* 2 STEP : generic styling rules */
+
+   body {
+      background: #bbb;
+      font-family: Arial, sans-serif;
+    } 
+
+    header {
+      margin-bottom: 1.5em;
+    }
+
+    header,
+    footer {
+      background-color: #080808;
+      padding: 1.5em;
+      color: #fff;
+    }
+
+     main {
+      background: #fff;
+      padding: 0 1.5em 1.5em 1.5em;
+    } 
+
+    header,
+    footer,
+    main {
+      border-radius: 5px;
+    }
+
+    /* padding создает визуально блок для артикл и background подкрашивает его */
+    
+    article {
+        background: linear-gradient(rgb(246, 246, 150), rgb(160, 156, 156));
+        border-radius: 15px;
+        padding: 1.5em; 
+    }
+/* визуально текст поднимаем выще за счет того, что убираем margin */
+    article h4 {
+      margin: 0;
+    } 
+
+    /* 3 STEP : applying float section */
+
+    /* double container pattern */
+    .container {
+     max-width: 90%;
+     margin: 0 auto; /* Questo approccio ci consentirà di centrare il
+contenuto */
+    }
+
+    article {
+    float: left; /* без этого кода элементы расположены в одну колонну, 
+    этот код позволяет расположить элементы в две вертикальные колонны */
+      width: 50%;
+    }
+
+    /* 4 STEP : fixing floating section */
+
+    /* создаем после section псевдо элемент, 
+    кот.позволяет зафиксировать footer внизу после артиклс */
+    section::after {
+     display: block;
+      content: " ";
+     clear: both; 
+    } 
+
+    /* 5 STEP : article margins */
+    
+
+    article {
+     margin: 1.5em 1.5em 1.5em 0;
+      width: calc(50% - 1.5em);
+    }
+
+    /*fixes the margins of the edge children*/
+    section {
+      margin-right: -1.5em;
+      margin-bottom: -1.5em;
+    } 
+
+    /* 6 STEP : Fixes collapsing margin-top of section title */
+
+    section::before {
+      display: table;
+      content: " ";
+    }
+
+    /* 7 STEP : grid row clearfix */
+
+    .articles > :nth-child(2n + 1) {
+      clear: left;
+    }
+
+    /* 8 STEP : grid element styling */
+
+    .articles img {
+      float: left;
+      margin: 0 1.5em 1.5em 0;
+    }
+
+    .articles .article-body {
+      overflow: auto;
+    } 
+
+    /* esercizio */
+    /* per centrare logo */
+    #logo {
+        display: block;
+        margin: 0 auto; 
+        border-radius: 5px;
+    }
+    
+   article img {
+        width: 200px;
+        border-radius: 5px;
+        
+    }
+
+    
+    /** commento **/
+  </style>
+
+  <body>
+    <div class="container">
+      <header>
+        <img src="../Lezione8/best_movies.jpeg" id="logo">
+      </header>
+      <main>
+        <section>
+          <div class="articles">
+            <article>
+              <img
+                src="../Lezione8/avatar.jpeg"
+                alt="img1"
+                class="media-image"
+              />
+              <div class="article-body">
+                <h4> <h2><a href="https://www.timeout.com/film/best-movies-of-all-time" target="_self">Avatar</a></h2></h4>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="../Lezione8/blackAdam.jpeg"
+                alt="img1"
+                class="media-image"
+              />
+              <div class="article-body">
+                <h4>Lorem ipsum</h4>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="../Lezione8/Mask,jpeg.jpeg"
+                alt="img1"
+                class="media-image"
+              />
+              <div class="article-body">
+                <h4>Lorem ipsum</h4>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="../Lezione8/strange.jpeg"
+                alt="img1"
+                class="media-image"
+              />
+              <div class="article-body">
+                <h4>Lorem ipsum</h4>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="../Lezione8/topgun.jpeg"
+                alt="img1"
+                class="media-image"
+              />
+              <div class="article-body">
+                <h4>Lorem ipsum</h4>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="../Lezione8/violent.jpeg"
+                alt="img1"
+                class="media-image"
+              />
+              <div class="article-body">
+                <h4>Lorem ipsum</h4>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="../Lezione8/men.jpeg"
+                alt="img1"
+                class="media-image"
+              />
+              <div class="article-body">
+                <h4>Lorem ipsum</h4>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="../Lezione8/DADDYH.jpeg"
+                alt="img1"
+                class="media-image"
+              />
+              <div class="article-body">
+                <h4>Lorem ipsum</h4>
+                <p>
+                  Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                  eget laoreet. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Morbi nec varius
+                  lorem.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer>All rights reserved - © copyright 2003/2013</footer>
+    </div>
+  </body>
+</html>
